@@ -1,0 +1,277 @@
+/*App Skeleton css v0.0.1a*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	-webkit-user-select: none;
+	user-select:none;
+	font-family:Helvetica;
+}
+
+body{
+	background:#000;
+	/* height:100%; */
+}
+
+/*containers*/
+div[bone=skeleton]{
+	background:#fff;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:auto;
+}
+
+div.skeletonPop{
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-webkit-transform: translate3d(0, 0, 0);
+	/* -webkit-transition: -webkit-transform .5s linear; */
+	-webkit-transform: scale(1) !important;
+	top:0 !important;
+	left:0 !important;
+}
+.skeletonPop input, .skeletonPop select, .skeletonPop a, .skeletonPop button, .skeletonPop textarea, .skeletonPop [bone=button]{
+	visibility:visible !important;
+}
+
+div[bone=skeleton].skeletonPassive{
+	-webkit-transform: scale(0);
+	top:-1024px;
+	left:-1024px;
+	display:none;
+}
+.skeletonPassive input, .skeletonPassive select, .skeletonPassive a, .skeletonPassive button, .skeletonPassive textarea, .skeletonPassive [bone=button]{
+	visibility:hidden;
+}
+
+.skeletonActive{
+	height:auto;
+	display:block;
+}
+
+div[bone=skull]{
+	background:#000;
+	color:#fff;
+	min-height:50px;
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:10;
+}
+
+div[bone=foot]{
+	background:#000;
+	color:#fff;
+	min-height:50px;
+	width:100%;
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:10;
+}
+
+div[bone=spine]{
+	margin:50px 0;
+	width:100%;
+	color:#000;
+	background:#fff;
+	height:auto;
+}
+
+div[bone=left-arm]{
+	height:100%;
+	width:50%;
+	position:fixed;
+	left:0;
+	background:#fff;
+}
+
+div[bone=right-arm]{
+	height:100%;
+	width:50%;
+	position:fixed;
+	right:0;
+	background:#fff;
+}
+
+[bone=ribcage]{
+	display:block;
+	padding:2%;
+	margin:10px 0;
+	-webkit-border-radius:5px;
+	border:3px solid #000;
+}
+div[bone=ribcage], ul[bone=ribcage]{
+	list-style:none;
+}
+ol[bone=ribcage]{
+	list-style:decimal inside none;
+}
+
+[bone=rib], [bone=ribcage] > *{
+	margin: 10px 0;
+	-webkit-border-radius:5px;
+	background:#999;
+	display:block;
+	padding:1%;
+}
+
+div[bone=pop-up]{
+	position:absolute;
+	top:0;
+	left:0;
+	margin:20%;
+	height:60%;
+	width:60%;
+	background:#fff;
+}
+
+/*inputs*/
+[bone=button]{
+	display:block;
+	border:3px solid #000;
+	-webkit-border-radius: 5px;
+	height:2em;
+	padding:5px;
+	background:#999;
+	color:white;
+	text-decoration:none;
+	text-align:center;
+	line-height:2em;
+}
+[bone=button]:active{
+	border:none;
+}
+
+div[bone=checkbox]{
+	position:relative;
+	display:block;
+	border:3px solid #000;
+	-webkit-border-radius:5px;
+	height:2em;
+	padding:5px;
+	background:#999;
+	color:white;
+	text-decoration:none;
+	text-align:center;
+	line-height:2em;
+}
+div[bone=checkbox] span{
+	display:block;
+	position:absolute;
+	left:10%;
+	width:1em;
+	height:1em;
+	top:0.75em;
+}
+div[bone=checkbox] span.unchecked{
+	background:#000;
+}
+div[bone=checkbox] span.checked{
+	background:#FFF;
+}
+div[bone=checkbox] input[type=checkbox]{
+	display:none;
+}
+
+div[bone=dropdown]{
+	position:relative;
+	display:block;
+	border:3px solid #000;
+	-webkit-border-radius: 5px;
+	height:2em;
+	padding:5px;
+	background:#999;
+	color:white;
+	text-decoration:none;
+	text-align:center;
+	line-height:2em;
+}
+div[bone=dropdown] select{
+	width:100%;
+	height:100%;
+	color:transparent;
+	background:transparent;
+	border:none;
+	-webkit-appearance:none;
+	position:absolute;
+	top:0;
+	left:0;
+}
+div[bone=dropdown] span{
+	position:absolute;
+	right:10%;
+	font-family:arial black;
+	font-size:1.5em;
+	font-weight:bold;
+}
+/*general display*/
+.hidden{
+	display:none;
+}
+
+div[bone=navBar]{
+	background:#999;
+	border:1px solid #000;
+	color:#FFF;
+	height:2em;
+	left:0;
+	position:fixed;
+	width:100%;
+	z-index:10;
+}
+div[bone=navBar] > div{
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	float:left;
+	line-height:2em;
+	text-align:center;
+	width:32%;
+}
+
+.navActive{
+	background:#FFF;
+	color:#999
+}
+
+.contactMenu{
+	border:none;
+	padding-top:2em;
+}
+
+@media screen and (max-width: 1024px) {
+	div[bone=spine]{
+		min-height:986px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	div[bone=spine]{
+		min-height:842px;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	div[bone=spine]{
+		min-height:618px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	div[bone=spine]{
+		min-height:533px;
+	}	
+}
+
+@media screen and (max-width: 320px) {
+	div[bone=spine]{
+		min-height:298px;
+	}
+}

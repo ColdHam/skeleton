@@ -1,0 +1,54 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="skeleton.css">
+	<script src="jquery-2.0.2.min.js"></script>
+	<script src="skeleton.js"></script>
+</head>
+<body>
+
+<div id="skContacts" bone="skeleton">
+	<div bone="skull">
+		<h1>Contacts</h1>
+	</div>
+	<div bone="spine" with="skull">
+		<div id="contactHeader" bone="navBar">
+			<div id="btnShowContacts" class="navActive">Contacts</div>
+			<div id="btnShowGroups">Groups</div>
+			<div id="btnShowFavorites">Favorites</div>
+		</div>
+		<div >
+			<!--Alphabetic contacts go here-->
+			<div bone="ribcage" id="rcContacts">
+				<div>Hello</div>
+				<div>World</div>
+				<div>Goodbye</div>
+				<div>Dennis</div>
+			</div>
+			<div bone="button" id="importContacts">Import Contacts</div>
+			</div>
+		</div>
+		<div >
+			<div bone="ribcage" id="rcGroups">
+				<div id="btnNewGroup" class="newContact">Create Group</div>
+				<!--Contacts ordered by groups go here-->
+				<div id="fakeGroup" class="contactGroup">
+					<div class="groupTitle"> Fake Group <img id="btnToggleView" class="groupToggle" src="img/subtract.svg"></div>
+					<div id="craigNation" class="contact"><img class="contactImg" src="img/contact.svg">craigNation</div>
+					<div id="codeBandit" class="contact"><img class="contactImg" src="img/contact.svg">codeBandit</div>
+					<div id="xXColdHamXx" class="contact"><img class="contactImg" src="img/contact.svg">xXColdHamXx</div>
+				</div>
+			</div>
+		</div>
+		<div >
+			<div  bone="ribcage" id="rcFavorites">
+				<div id="craigNation" class="contact"><img class="contactImg" src="img/contact.svg">craigNation</div>
+				<div id="codeBandit" class="contact"><img class="contactImg" src="img/contact.svg">codeBandit</div>
+				<div id="Coldham" class="contact"><img class="contactImg" src="img/contact.svg">Coldham</div>
+				<div id="nick" class="contact"><img class="contactImg" src="img/contact.svg">nick</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
